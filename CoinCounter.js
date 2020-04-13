@@ -16,15 +16,14 @@ console.log(coinCounter1(4.99));
 const coinCounter2 = function getChange() {   
   //calculate coins
   return function(numOfQuarts) {
-
     return function(numOfDimes) {
       return function (numOfNickles) {
         return function (numOfPennies){
-          return `your change is.. ${numOfQuarts} quarters, ${numOfDimes} dimes, ${numOfNickles} nickles, and ${numOfPennies} pennies`;
+          return `your change is.. ${numOfQuarts} quarter(s), ${numOfDimes} dime(s), ${numOfNickles} nickle(s), and ${numOfPennies} penn(y)(ies)`;
         }
       }
     }
   }
 }
 
-console.log("Your change consists of..", coinCounter2()(5));
+console.log(coinCounter2()(5)(3)(6)(1));
