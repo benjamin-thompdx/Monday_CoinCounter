@@ -5,29 +5,40 @@
 // calculate number of pennies
 // print all values *
 
-const money = 4.99;
+const money = 5.99;
+// export class Coin2 {
+  
+  // const coinArray = [25, 10, 5, 1];
+  // const outputObj = []
+  // const functionname = (currentVal, obj, i) => {
+// define counter = 0
+// }
+// quarter(counter){
+  const quarterCounter = (counter) => { 
+    if (isNaN(counter)) {
+      return;
+    }
+    if (counter /= .25) {
+      return counter;
+    } else {
+      return quarterCounter(counter + 1); 
+    }
+  }
+  console.log(Math.floor(quarterCounter(money)));
+//   return quarterCounter;
+// }
 
-const quarterCounter = (counter) => {
-	if (isNaN(counter)) {
+//trying to make sense of above func
+const KeturahTryingToUnderstand = (money) => {
+	if (isNaN(money)) {
   	return;
   }
-  if (counter /= .25) {
-  	return counter;
-  } else {
-  	return quarterCounter(counter + 1);
+  if (money /= .25) { //keeps it from infinit
+  	return ????;
+  } else { //recursion
+  	return quarterCounter(thisShouldBeNotmoneyXnumberofQuarters + 1);
   }
 }
-
-// const KeturahTryingToUnderstand = (money) => {
-// 	if (isNaN(money)) {
-//   	return;
-//   }
-//   if (money /= .25) { //keeps it from infinit
-//   	return ????;
-//   } else { //recursion
-//   	return quarterCounter(thisShouldBeNotmoneyXnumberofQuarters + 1);
-//   }
-// }
 
 const numberOfQuarters = Math.floor(quarterCounter(money));
 const moneyAfterQuarters = money - (numberOfQuarters * .25);
@@ -78,3 +89,6 @@ const numberOfPennies = Math.floor(pennyCounter(moneyAfterNickles));
 
 // Insert result print HERE
 console.log(`Total amount: ${money}, Quarters: ${numberOfQuarters}, Dimes: ${numberOfDimes}, Nickles: ${numberOfNickles}, Pennies: ${numberOfPennies}`);
+
+}
+
