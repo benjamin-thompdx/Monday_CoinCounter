@@ -5,6 +5,7 @@
 // calculate number of pennies
 // print all values *
 
+
 const money = 5.99;
 // export class Coin2 {
   
