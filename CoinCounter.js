@@ -13,11 +13,17 @@ const coinCounter1 = function(change) {
 console.log(coinCounter1(4.99));
 
 //Functions Returning Functions
-const coinCounter2 = function getChange() {
+const coinCounter2 = function getChange() {   
   //calculate coins
   return function(numOfQuarts) {
-    return function(numOfDimes)
-    return `quarters: ${numOfQuarts}`
+
+    return function(numOfDimes) {
+      return function (numOfNickles) {
+        return function (numOfPennies){
+          return `your change is.. ${numOfQuarts} quarters, ${numOfDimes} dimes, ${numOfNickles} nickles, and ${numOfPennies} pennies`;
+        }
+      }
+    }
   }
 }
 
