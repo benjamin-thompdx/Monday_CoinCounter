@@ -52,7 +52,7 @@ addThenMult = (addBy) => {
     return mult = (userNum) => {
       return (userNum + addBy) * multBy
     }
-  }
+  }s
 }
 const addFiveMultiplyByTwo = addThenMult(5)(2)
 
